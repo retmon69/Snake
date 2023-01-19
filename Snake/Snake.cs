@@ -31,6 +31,7 @@ namespace Snake
         {
             if (parts[0].Location.CompareTo(food.Location))
             {
+                food.Despawn();
                 Delete(parts);
                 
                 SnakeBodyPart lastPart = parts[parts.Count - 1];
@@ -53,9 +54,10 @@ namespace Snake
                         newLocation = new Point(lastPart.Location.X, lastPart.Location.Y - 1);
                         parts.Add(new SnakeBodyPart(newLocation, lastPart.Direction));
                         break;
-                }
-                food.Spawn(parts);
+                }               
                 Draw();
+                Thread.Sleep(1);
+                food.Spawn(parts);
                 Length = parts.Count;
                 return food;
             }

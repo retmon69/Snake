@@ -9,15 +9,15 @@ namespace Snake
         public void Draw(int x, int y, int score)
         {
             Console.SetCursorPosition(0, 0);
-            Console.Write("---------------------");
+            Console.Write("______________________");
             Console.SetCursorPosition(0, 21);
-            Console.Write("---------------------");
-            for (int i = 0; i <= 21; i++)
+            Console.Write("______________________");
+            for (int i = 1; i <= 21; i++)
             {
                 Console.SetCursorPosition(21, i);
                 Console.Write("|");
             }
-            for (int i = 0; i <= 21; i++)
+            for (int i = 1; i <= 21; i++)
             {
                 Console.SetCursorPosition(0, i);
                 Console.Write("|");

@@ -15,6 +15,7 @@ namespace Snake
 
         public Game()
         {
+            Console.Clear();
             food.Spawn(snake.parts);
         }
         public void Start()
@@ -44,16 +45,16 @@ namespace Snake
 
                 switch (input)
                 {
-                    case ConsoleKey.D:
+                    case ConsoleKey.RightArrow:
                         bufferDirection = "Right";
                         break;
-                    case ConsoleKey.A:
+                    case ConsoleKey.LeftArrow:
                         bufferDirection = "Left";
                         break;
-                    case ConsoleKey.W:
+                    case ConsoleKey.UpArrow:
                         bufferDirection = "Up";
                         break;
-                    case ConsoleKey.S:
+                    case ConsoleKey.DownArrow:
                         bufferDirection = "Down";
 
                         break;

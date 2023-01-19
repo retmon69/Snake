@@ -10,7 +10,11 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            
+            Console.SetWindowSize(35, 22);
+            Console.SetBufferSize(35, 22);                
+            Console.CursorVisible = false;
+            Console.WriteLine("Press any Key to start");
+            Console.ReadKey();
             Game game = new Game();
             game.Start();
         }

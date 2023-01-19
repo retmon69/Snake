@@ -10,7 +10,6 @@ namespace Snake
         public Food()
         {  
             Location = new Point();
-
         }
 
         private void Draw()
@@ -35,18 +34,17 @@ namespace Snake
                 Location.Y = random.Next(1, 20);
                 foreach (SnakeBodyPart part in snakeBodyParts)
                 {
-                    if (part.Location == Location)
+                    if (part.Location.CompareTo(Location))
                     {
                         same = true;
                     }
                 }
 
-            } while (same);
-            Despawn();
+            } while (same);          
             Draw();
         }
 
-        private void Despawn()
+        public void Despawn()
         {
             Point oldCursorLocation = new Point(Console.CursorTop, Console.CursorLeft);
             Console.SetCursorPosition(Location.X, Location.Y);
